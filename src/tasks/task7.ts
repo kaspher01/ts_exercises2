@@ -11,6 +11,4 @@ export const wyniki: unknown = {
     1: ""
 }
 
-//# ---
-
-export const wynikiAleZTypem = wyniki;
+export const wynikiAleZTypem = wyniki as Record<number, string>;

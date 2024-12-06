@@ -12,6 +12,16 @@
  * - `status` - status kontroli, może być jednym z dwóch: "ok" lub "nok"
  */
 
+export type Kontrola = {
+    id: number;
+    data: string;
+    godzina: string;
+    miejsce: string;
+    typ: string;
+    opis: string;
+    status: "ok" | "nok";
+};
+
 export const kontrola1: Kontrola = {
     id: 1,
     data: "2021-01-01",
@@ -32,7 +42,4 @@ export const kontrola2: Kontrola = {
     status: "nok"
 }
 
-//# ---
-
-export type Kontrola = any;
 

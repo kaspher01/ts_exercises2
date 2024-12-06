@@ -10,12 +10,13 @@
 export type Wydatek = {
     kwota: number;
     opis: string;
-}
+};
 
-//# ---
+export type WydatekSzefa = Wydatek & {
+    isSzef: true;
+};
 
-//export type WydatekSzefa = any;
-export type WycieczkaSzefaNaKosztFirmy = any;
+export type WycieczkaSzefaNaKosztFirmy = WydatekSzefa & {
+    cel: string;
+};
 
-export interface WydatekSzefa {};
-//export interface WycieczkaSzefaNaKosztFirmy {};

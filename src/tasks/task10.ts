@@ -31,9 +31,7 @@ export type JeszczeStarszaKontrola = {
     opis: string;
 }
 
-//# ---
-
-export type PartialKontrola<T> = any;
+export type PartialKontrola<T extends Partial<Kontrola>> = Partial<Pick<Kontrola, keyof T & keyof Kontrola>> & Omit<Kontrola, keyof T & keyof Kontrola>;
 
 const kontrola1: PartialKontrola<StaraKontrola> = {
     godzina: "12:00",
